@@ -1,0 +1,94 @@
+.crypto-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  min-width: 330px;
+  min-height: 330px;
+  padding: 10px;
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+  }
+
+  & h3 {
+    max-width: 230px;
+  }
+
+  & p {
+    display: flex;
+    align-items: center;
+  }
+
+  & button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 120px;
+    font-weight: 700;
+    cursor: pointer;
+
+    & img {
+      max-width: 50px;
+    }
+  }
+
+  &.bullish-trend {
+    background-color: #1b6f1b25;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+  }
+
+  &.bearish-trend {
+    background-color: #d043432f;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+  }
+
+  &.going-up {
+    border: 1px solid green;
+  }
+
+  &.going-down {
+    border: 1px solid red;
+  }
+}
+
+.trend-image {
+  max-width: 100px;
+  align-self: flex-end;
+  margin-top: -50px;
+}
+
+.tooltip-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+}
+
+.tooltip-btn:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

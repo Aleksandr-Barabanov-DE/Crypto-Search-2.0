@@ -1,0 +1,42 @@
+@use "./variables" as v;
+
+@mixin appDefault {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin nav-link($color, $hoverColor) {
+  color: $color;
+  text-decoration: none;
+  font-size: v.$fontSizeNavLink;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $hoverColor;
+  }
+}

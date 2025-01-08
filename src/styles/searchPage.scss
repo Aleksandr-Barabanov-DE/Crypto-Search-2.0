@@ -1,0 +1,50 @@
+@use "./mixins" as m;
+@use "./variables" as v;
+
+.container {
+  &__selector-section {
+    display: flex;
+    gap: 3vw;
+  }
+}
+
+@include m.respond-to(830px) {
+  .container {
+    &__selector-section {
+      flex-direction: column;
+    }
+  }
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.select-button:disabled {
+  color: #666;
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.select-button {
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.crypto-data ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+@include m.respond-to(v.$breakpoint-small-mobile) {
+  .select-wrapper {
+    flex-direction: column;
+  }
+}

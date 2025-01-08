@@ -1,0 +1,56 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.top-five-container {
+  @include m.flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 40px;
+  gap: v.$listGap;
+  padding: 5px 10px 5px 20px;
+  text-align: center;
+
+  & h4 {
+    color: v.$lightTextColor;
+  }
+
+  @include m.respond-to(956px) {
+    padding: 10px;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.top-five-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  @include m.respond-to(456px) {
+    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.top-five-item {
+  display: flex;
+  align-items: center;
+  font-family: v.$mainFontFamily;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 14px;
+
+  & p,
+  h4 {
+    color: v.$lightTextColor;
+  }
+}
+
+.top-five-trend-icon {
+  max-width: 30px;
+  height: auto;
+}

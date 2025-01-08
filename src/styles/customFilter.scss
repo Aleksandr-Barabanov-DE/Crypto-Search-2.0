@@ -1,0 +1,46 @@
+@use "./mixins" as m;
+@use "./variables" as v;
+
+.sorting-controls {
+  @include m.flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 90vw;
+  gap: 20px;
+  &__label {
+    font-size: 20px;
+    font-family: var(v.$mainFontFamily);
+  }
+  &__select {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    &__option {
+      font-family: var(v.$mainFontFamily);
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+  }
+  &__select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__img {
+    max-width: 40px;
+  }
+}
+
+@include m.respond-to(v.$breakpoint-small-mobile) {
+  .sorting-controls {
+    align-items: center;
+    justify-content: center;
+  }
+}

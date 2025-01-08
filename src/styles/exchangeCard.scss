@@ -1,0 +1,22 @@
+.exchange-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 5px;
+  min-width: 330px;
+  min-height: 330px;
+  & p {
+    & a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      & img {
+        max-width: 40px;
+      }
+    }
+  }
+}
