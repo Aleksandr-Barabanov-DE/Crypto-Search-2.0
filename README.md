@@ -6,7 +6,7 @@
 
 - **React**: For building a dynamic and responsive user interface.
 - **TypeScript**: Enhances reliability through static typing and improved code maintainability.
-- **SASS**: For advanced styling with features like variables, nesting, and mixins.
+- **SСSS**: For advanced styling with features like variables, nesting, and mixins.
 - **Vite**: Provides fast development environment and optimized builds.
 - **React Router**: Implements seamless navigation across multiple pages using hooks like `useMatch` and `useNavigate`.
 - **React Hooks**: 
