@@ -129,4 +129,4 @@ git clone https://github.com/yourusername/crypto-tracker.git
   </a>
 </div>
 
-© 2024 Nutrition Analyzer
+© 2024 Crypto Tracker
